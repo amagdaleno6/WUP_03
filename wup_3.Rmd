@@ -41,7 +41,7 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 ```{r}
 favstats(alcohol~Seat,data=davisdata)
 ```
-The numerical data shows that there seems to be a significant different for those sitting on the back.  The median is 4 and the mean is 9.625 compared to 0 and 1.803030 for the front and 1 and 3.283133 for the middle. 
+The numerical data shows that there seems to be a significant difference on the amount of alcohol consumed for those sitting on the back.  The median is 4 and the mean is 9.625 compared to 0 and 1.803030 for the front and 1 and 3.283133 for the middle. 
   
 
 ## Inferential Tests
@@ -50,13 +50,13 @@ model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```  
 
-p=0.000116 This leads us to conclude that there is a statistical difference in the amount of alcohol consumed between the individuals sitting in the front, middle, and back. 
+p=0.000116 This leads us to infer that there is a statistical difference in the amount of alcohol consumed between the individuals sitting in the front, middle, and back. 
 ```{r}
 plot(TukeyHSD(model1))
 ```
   
-Previous data showed there was a significant different between those sitting in the front, middle, and back.  To tukey graph shows where the stasitical diffence is.  There is no statistival difference between those sitting on the middle or front.  There is a statistical difference on those sitting on the back.  
+Previous data showed there was a significant difference on the amount of alcohol consumed between those sitting in the front, middle, and back.  To tukey analysis shows where the statistical difference lies.  There is no statistical difference between those sitting on the middle or front. There is a statistical difference on those sitting on the back.  
 
 ## Conclusions
-
+The analysis conducted showed that there is a significant difference on the amount of alcohol consumed between the individuals sitting on the front, middle, and back.  The tukey analisys displayed the statistical difference is found on those individuals sitting on the back.  Therefore, we reject the null hypothesis and accept the alternate hypothesis.  Individuals sitting on the back are statistically likely to consume more alcohol than those sitting on the middle or front.   
 
